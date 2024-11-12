@@ -1,0 +1,5 @@
+print('họ tên: Đông Phương Hồng Đức ')
+print('mssv: 501220491')   
+print('lớp: cd22ct9') 
+print('số điện thoại: 0376418644')
+print('giới tính:nam')   
