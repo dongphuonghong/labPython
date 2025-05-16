@@ -6,4 +6,4 @@ df=float(input(" nhap do f"))
 #tính độC theo công thức chuyển đổi df=(df-32)*5/9
 dc=(df-32)*5/9  
 #xuất kết quả
-print("Độ Celsius là:", dc)
+print("Độ Celsius là:", dc)     

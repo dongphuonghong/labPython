@@ -37,7 +37,7 @@ a=int(input("nhap a: "))
 b=int(input("nhap b: "))
 c=int(input("nhap c: "))
 #sử dụng hàm max của python để tìm số lớn nhất
-max1=max(a,b,c)
+max=max(a,b,c)
 #in ra kết quả
 print("so lon nhat la: ",max1)
     """
