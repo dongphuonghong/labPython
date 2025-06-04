@@ -1,4 +1,5 @@
-# 40. Tinh.y x y x P  ) , (
+# 40. Tính P(x,n) = x¹ + x² + x³ + ... + xⁿ (tổng các lũy thừa của x từ 1 đến n)
+# tạo biến n và nhập giá trị từ bàn phím40. Tinh.y x y x P  ) , (
 # tạo biến n và nhập giá trị từ bàn phím
 n=int(input("Nhap n: "))
 # tạo biến x và nhập giá trị từ bàn phím
@@ -14,7 +15,7 @@ for i in range(1,n+1):
     # Cộng dồn vào tổng sum
     sum+=luythua
 # In ra kết quả tổng P(x, n)
-print(f"Tong  la: {sum:}")
+print(f"Tong la: {sum}")
 # cách 2 sử dụng hàm math.pow
 """ 
 import math

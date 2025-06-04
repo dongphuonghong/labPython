@@ -1,28 +1,27 @@
-# 33. Tinh,  vơi2 2 2 2 3 2 1 ) ( n n S      
-# Ý tưởng: sử dụng vòng lặp để tính tổng bình phương các số từ 1 đến n
-# tạo biến n và nhập giá trị từ bàn phím
+# 33. Tính S(n) = 1² + 2² + 3² + ... + n² (với n ≥ 0)
+# Tính tổng bình phương các số từ 1 đến n
+# CÁCH 1: Sử dụng vòng lặp for với phép nhân
+# Nhập giá trị n từ bàn phím
 n=int(input("nhap n: "))
-# khởi tạo biến sum = 0 để lưu tổng
+# Khởi tạo biến sum = 0 để lưu tổng
 sum=0
-# dùng vòng lặp for để tính tổng bình phương từ 1 đến n
+# Dùng vòng lặp for để tính tổng bình phương từ 1 đến n
 for i in range(1,n+1):
-        # cộng bình phương của i vào biến sum (i^2 = i * i)
-#ta dùng công thức i*i để cộng vào biến sum
+    # Cộng bình phương của i vào biến sum (i² = i * i)
     sum+=i*i
-# in ra kết quả tổng S(n)
+# In ra kết quả tổng S(n)
 print("Tổng S(n) là:", sum)
-# cách 2 dùng hàm math.pow để tính lũy thừa
+# CÁCH 2: Dùng hàm math.pow để tính lũy thừa
 """  
 import math
-# nhập n từ bàn phím
+# Nhập n từ bàn phím
 n=int(input("nhap n: "))
-# khởi tạo biến sum = 0 để lưu tổng
+# Khởi tạo biến sum = 0 để lưu tổng
 sum=0
-# dùng vòng lặp for để tính tổng bình phương từ 1 đến n
+# Dùng vòng lặp for để tính tổng bình phương từ 1 đến n
 for i in range(1,n+1):
-        # dùng math.pow để tính i^2, sau đó ép kiểu về int
-# dùng hàm math.pow để tính lũy thừa
+    # Dùng math.pow để tính i², sau đó ép kiểu về int
     sum+=(int)(math.pow(i,2))
-# in kết quả
+# In kết quả
 print("Tổng S(n) là:", sum)
 """

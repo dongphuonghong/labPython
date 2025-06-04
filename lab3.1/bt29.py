@@ -4,11 +4,14 @@
 n=int (input("Nhap n: "))
 # Khởi tạo biến tích t = 1 để lưu kết quả tích
 t=1
-# Sử dụng vòng lặp for để tính tích các số lẻ từ 1 đến (2n + 1)
-for i in range(0,n+1):
-    # Tính giá trị lẻ theo công thức (2 * i) + 1
+# Dùng vòng lặp while để tính tích các số lẻ từ 1 đến (2n + 1)
+i=0
+while i<=n:
+    # Tính số lẻ tại vị trí i, công thức là (2*i + 1)
     sum=(2*i)+1
-    # Nhân t với giá trị vừa tính
+    # Nhân dồn vào biến tích t
     t*=sum
+    # Tăng i lên 1 để tiếp tục vòng lặp
+    i+=1
 # In ra kết quả tích của dãy số lẻ
 print("Tich cua day so le tu 1 den",(2*n+1),"la:",t)

@@ -8,8 +8,7 @@ b = int(input("Nhập số nguyên b: "))
 ucln=1
 # Duyệt các số từ 2 đến min(a, b)
 for i in range(2, min(a,b)+1):
-    # Nếu số i chia hết cho cả a và b thì cập nhật ucln = i
-    if a%i==0 and b%i==0:
+    # Nếu số i chia hết cho cả a và b thì cập nhật ucln = i    if a%i==0 and b%i==0:
         ucln=i
         # in ra ước số chung lớn nhất
 print("Ước số chung lớn nhất của",a,"và",b,"là:",ucln)
