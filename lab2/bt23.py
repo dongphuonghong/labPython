@@ -1,16 +1,16 @@
-#Viêt chương trinh nhâp vao sô nguyên dương n. Kiêm tra xem n co phai la sô chinh phương hay không? (sô chinh phương la sô khi lây căn băc 2 co kêt qua la nguyên).
-#tạo biến n nhập giá trị từ bàn phím
-n=int(input("Nhập số nguyên dương n: "))
+# 23. Nhập vào số nguyên dương n; kiểm tra xem n có phải là số chính phương hay không.
+# tạo biến n nhập giá trị từ bàn phím
+n = int(input("Nhập số nguyên dương n: "))
 # công thức kiểm tra số chính phương bằng cách lấy căn bậc 2 của n
-cp=int(n**0.5)
+cp = int(n**0.5)
 # kiểm tra n có phải là số chính phương hay không
-#nếu n có căn bậc 2 bằng số nguyên thì n là số chính phương
-if cp*cp==n:
+# nếu n có căn bậc 2 bằng số nguyên thì n là số chính phương
+if cp*cp == n:
     print(f"{n} là số chính phương.")
-#nếu không thì n không phải là số chính phương
+# nếu không thì n không phải là số chính phương
 else:
     print(f"{n} không là số chính phương.")
-    #cách 2 sử dụng thư viện  math hàm sqrt dùng để lấy căn bậc 2 của n
+    # cách 2 sử dụng thư viện  math hàm sqrt dùng để lấy căn bậc 2 của n
     """
     import math
 #tạo biến n nhập giá trị từ bàn phím

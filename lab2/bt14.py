@@ -1,30 +1,31 @@
-#Cho ba sô a, b, c đoc vao tư ban phim. Hay in ra man hinh theo thư tư tăng dân cac sô.
-a=int(input("Nhap so a: "))
-b=int(input("Nhap so b: "))
-c=int(input("Nhap so c: "))
-#kiểm tra từng trường hợp   
-#nếu a<b<c thì in ra a,b,c
-if a<b and a<c:
-    if b<c:
-        print(a,b,c)
-        #nếu a<c<b thì in ra a,c,b
+# 14. Cho ba số a, b, c (nhập từ bàn phím). In ra màn hình thứ tự tăng dần của ba số.
+# tạo biến a,b,c nhập giá trị từ bàn phím
+a = int(input("Nhap so a: "))
+b = int(input("Nhap so b: "))
+c = int(input("Nhap so c: "))
+# kiểm tra từng trường hợp
+# nếu a<b<c thì in ra a,b,c
+if a < b and a < c:
+    if b < c:
+        print(a, b, c)
+        # nếu a<c<b thì in ra a,c,b
     else:
-        print(a,c,b)
-        #nếu b<a<c thì in ra b,a,c
-elif b<a and b<c:
-    if a<c:
-        print(b,a,c)
-        #nếu b<c<a thì in ra b,c,a
+        print(a, c, b)
+        # nếu b<a<c thì in ra b,a,c
+elif b < a and b < c:
+    if a < c:
+        print(b, a, c)
+        # nếu b<c<a thì in ra b,c,a
     else:
-        print(b,c,a)
-        #nếu c<a<b thì in ra c,a,b
+        print(b, c, a)
+        # nếu c<a<b thì in ra c,a,b
 else:
-    if a<b:
-        print(c,a,b)
-        #nếu c<b<a thì in ra c,b,a
+    if a < b:
+        print(c, a, b)
+        # nếu c<b<a thì in ra c,b,a
     else:
-        print(c,b,a)
-#cách 2 sử dụng hàm max() và min()
+        print(c, b, a)
+# cách 2 sử dụng hàm max() và min()
 """
 #Cho ba sô a, b, c đoc vao tư ban phim. Hay in ra man hinh theo thư tư tăng dân cac sô.
 # nhap so a,b,c tu ban phim 
@@ -39,7 +40,7 @@ mid=a+b+c-max-min
 # in ra kết quả sau khi sắp xếp
 print("Thu tu tang dan cua 3 so la: ",min,mid,max)
 """
-#cách 3 sử dụng phép hoán vị
+# cách 3 sử dụng phép hoán vị
 """
 #Cho ba sô a, b, c đoc vao tư ban phim. Hay in ra man hinh theo thư tư tăng dân cac sô.
 # nhap so a,b,c tu ban phim 
@@ -62,6 +63,6 @@ if b>c:
     temp=b
     b=c
     c=temp
-    #xuât kết quả
+    #xuất kết quả
 print("Cac so duoc sap xep theo thu tu tang dan la: ",a,b,c)
 """

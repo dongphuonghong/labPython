@@ -1,14 +1,14 @@
-# 12. Nhâp vao hai sô nguyên a, b. In ra man hinh gia tri lơn nhât.
-# Cách 1 swr dụng if else:
-    # tạo biến a, b và nhập giá trị cho a, b từ bàn phím
-a = int(input(" nhap a : "))    
-b = int(input(" nhap b : "))  
+# 12. Nhập vào hai số nguyên a, b; in ra màn hình giá trị lớn nhất.
+# Cách 1 sử  dụng if else:
+# tạo biến a, b và nhập giá trị cho a, b từ bàn phím
+a = int(input(" nhap a : "))
+b = int(input(" nhap b : "))
 # so sánh giá trị của a và b
-if a > b: 
+if a > b:
     # nếu a lớn hơn b thì in ra ket qua a lớn hơn b
     print("a là số lớn nhất")
 # ngược lại in ra ket qua b lớn hơn a
-else: 
+else:
     print("b là số lớn nhất")
 # Cách 2 sử  dụng if else giả dụ a là số lớn nhất :
 """
