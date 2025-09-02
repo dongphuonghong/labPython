@@ -1,13 +1,13 @@
-# 26. Viết chương trình đếm số ước số của số nguyên dương N. Ví dụ: N=12, số ước số của 12 là 6
+# 26. Viết chương trình đếm số ước của số nguyên dương N (ví dụ: N = 12 có 6 ước).
 # Nhập số nguyên dương từ bàn phím
-n=int(input("Nhap so nguyen duong N: "))
+n = int(input("Nhap so nguyen duong N: "))
 # Khởi tạo biến đếm d = 1 (vì i bắt đầu từ 1, và 1 luôn là ước của mọi số)
-d=1
+d = 1
 # Duyệt từ 1 đến n-1 để kiểm tra các ước số khác
-for i in range(1,n):
+for i in range(1, n):
     # Nếu N chia hết cho i thì i là ước của N → tăng biến đếm lên 1
-    if n%i==0:
-        d+=1
+    if n % i == 0:
+        d += 1
 # In ra tổng số ước của N
 print("Số ước của", n, "là", d)
 """

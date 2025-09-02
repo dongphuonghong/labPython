@@ -1,22 +1,22 @@
-# 38. Tính S(n) = 1 + (1+2)/2! + (1+2+3)/3! + ... + (1+2+...+n)/n!
+# 38. Tính S(n) = 1 + (1+2)/2! + (1+2+3)/3! + ... + (1+2+...+n)/n!.
 # CÁCH 1: Dùng for loop với công thức tổng số tự nhiên
 # Nhập giá trị n từ bàn phím
-n=int(input("Nhap n: "))
+n = int(input("Nhap n: "))
 # Khởi tạo biến sum = 1 để lưu tổng (bắt đầu với số hạng đầu tiên)
-sum=float(1)
+sum = float(1)
 # Dùng vòng lặp từ 2 đến n để tính từng phần tử của tổng
-for i in range(2,n+1):
+for i in range(2, n+1):
     # Tính tử số: 1 + 2 + ... + i
     # Công thức tổng số tự nhiên
-    tu_so = i * (i + 1) // 2  
+    tu_so = i * (i + 1) // 2
     # Tính giai thừa i!
     giaithua = 1
     for j in range(1, i+1):
         giaithua *= j
     # Cộng phần tử tu_so/i! vào tổng
     sum += tu_so / giaithua
-#in ra kết quả
-print("S(n) = ",sum)
+# in ra kết quả
+print("S(n) = ", sum)
 # CÁCH 2: Dùng hàm math.factorial
 """ 
 import math

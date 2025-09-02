@@ -1,4 +1,4 @@
-# 25. Viết chương trình nhập vào hai số nguyên dương a và b. Tìm ước số chung lớn nhất và bội số chung nhỏ nhất của a và b.
+# 25. Viết chương trình nhập vào hai số nguyên dương a và b; tìm ƯCLN và BCNN của a và b.
 # CÁCH 1: Thuật toán Euclid không sử dụng biến tạm
 # Nhập hai số nguyên dương từ bàn phím
 a = int(input("Nhập số nguyên a: "))
@@ -8,21 +8,21 @@ x = a
 y = b
 # Sử dụng thuật toán Euclid để tìm UCLN
 # Điều kiện: tiếp tục khi cả a và b đều khác 0
-while a!=0 and b!=0:
+while a != 0 and b != 0:
     # Nếu a lớn hơn b, thay a bằng a chia dư cho b
     if a > b:
         # Cập nhật a là a chia dư cho b
-        a=a % b
+        a = a % b
         # Nếu b lớn hơn hoặc bằng a, thay b bằng b chia dư cho a
-    else:        
-        b= b % a
+    else:
+        b = b % a
 # Xác định UCLN (số còn lại khác 0)
-ucln=a
-if b!=0:
+ucln = a
+if b != 0:
     # Nếu b khác 0 thì ucln là b
-    ucln=b
+    ucln = b
 # Tính BCNN bằng công thức BCNN = (x*y)/UCLN
-bcnn=(x*y)//ucln
+bcnn = (x*y)//ucln
 # In kết quả
 print("Ước số chung lớn nhất là: ", ucln)
 print("Bội số chung nhỏ nhất là: ", bcnn)

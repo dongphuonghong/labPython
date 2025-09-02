@@ -1,21 +1,21 @@
-# 27. Môt sô hoan thiên la môt sô co tông cac ươc sô cua no (không kê no) băng chinh no. Hay nhập vào số nguyên dương n và kiểm tra xem n có phải là số hoàn thiện không.Vi du: sô 6 la sô hoan thiên vi tông cac ươc sô la 1+2+3 = 6.
+# 27. Viết chương trình kiểm tra số nguyên dương n có phải là số hoàn thiện hay không (ví dụ: 6 = 1 + 2 + 3).
 # Nhập số nguyên dương từ bàn phím
-n=int(input("nhap so nguyen duong n: "))
+n = int(input("nhap so nguyen duong n: "))
 # tạo biến sum để lưu tổng các ước số
-sum=0
+sum = 0
 # Duyệt các số từ 1 đến n - 1 để tìm ước số
-for i in range(1,n):
+for i in range(1, n):
     # kiểm tra nếu i chia hết cho n thì cộng i vào biến sum
-    if n%i==0:
-        sum+=i
+    if n % i == 0:
+        sum += i
 # kiểm tra nếu sum bằng n thì in ra n là số hoàn thiện
-if sum==n:
-            print(n,"la so hoan thien")
+if sum == n:
+    print(n, "la so hoan thien")
 # nếu không thì in ra n không phải là số hoàn thiện
 else:
-        print(n,"khong phai la so hoan thien")
-        # cách 2 dùng thư viện math
-        """
+    print(n, "khong phai la so hoan thien")
+    # cách 2 dùng thư viện math
+    """
         import math
 # Nhập số nguyên dương từ bàn phím
 n=int(input("Nhập số nguyên dương n: "))
