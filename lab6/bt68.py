@@ -8,6 +8,11 @@ import random
 # Trả về: n (int) — số lượng phần tử (>0).
 # Hành vi: Nếu nhập không hợp lệ (<=0), in thông báo và yêu cầu nhập lại cho đến khi hợp lệ.
 def nhap_so_luong_phan_tu():
+    """Nhập số lượng phần tử danh sách (số nguyên dương).
+
+    Returns:
+        int: Số lượng phần tử (>0).
+    """
     while True:
         n = int(input("Nhập số lượng phần tử của mảng: "))
         if n > 0:
@@ -22,6 +27,14 @@ def nhap_so_luong_phan_tu():
 # Trả về: lst (list[int]) — danh sách chứa n số nguyên âm ngẫu nhiên.
 # Hành vi: Sử dụng random.randint để sinh từng phần tử và thêm vào danh sách.
 def nhap_danh_sach(n):
+    """Sinh danh sách gồm n số nguyên âm ngẫu nhiên [-100, -1].
+
+    Args:
+        n (int): Số lượng phần tử cần sinh.
+
+    Returns:
+        list[int]: Danh sách số nguyên âm ngẫu nhiên.
+    """
     lst = []
     for i in range(n):
         x = random.randint(-100, -1)

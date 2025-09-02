@@ -4,6 +4,14 @@
 # Hàm này sẽ lặp qua các số từ 2 đến căn bậc hai của n và kiểm tra xem n có chia hết cho bất kỳ số nào trong khoảng này hay không.
 # Nếu có, n không phải là số nguyên tố, ngược lại n là số nguyên tố.
 def kiemTraSoNguyenTo(n):
+    """Kiểm tra số nguyên tố.
+
+    Args:
+        n (int): Số nguyên cần kiểm tra.
+
+    Returns:
+        bool: True nếu là số nguyên tố, False nếu không.
+    """
     for i in range(2, int(n**0.5) + 1):
         if n % i == 0:
             return False
@@ -14,6 +22,14 @@ def kiemTraSoNguyenTo(n):
 
 
 def demSoNguyenTo(n):
+    """Đếm số chữ số nguyên tố trong n.
+
+    Args:
+        n (int): Số nguyên dương.
+
+    Returns:
+        int: Số lượng chữ số nguyên tố.
+    """
     d = 0
     while n > 0:
         chu_so = n % 10
@@ -29,6 +45,7 @@ def demSoNguyenTo(n):
 
 
 def main():
+    """Hàm chính: nhập n và in số lượng chữ số nguyên tố."""
     while True:
         n = int(input("Nhập số nguyên dương n (n > 0): "))
         if n > 0:

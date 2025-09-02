@@ -4,6 +4,14 @@
 # để xây dựng chuỗi nhị phân. Kết quả sẽ được trả về dưới dạng chuỗi.
 # Hàm này sẽ trả về giá trị nhị phân của n dưới dạng chuỗi.
 def chuyenDoiNhiPhan(n):
+    """Chuyển số nguyên sang nhị phân.
+
+    Args:
+        n (int): Số nguyên không âm.
+
+    Returns:
+        str: Biểu diễn nhị phân.
+    """
     if n == 0:
         return "0"
     nhi_phan = ""
@@ -17,7 +25,10 @@ def chuyenDoiNhiPhan(n):
 # chương trình sẽ yêu cầu nhập lại.
 # Sau khi nhập hợp lệ, nó sẽ gọi hàm chuyenDoiNhiPhan để chuyển đổi n sang giá trị nhị phân
 # và in ra kết quả.
+
+
 def main():
+    """Hàm chính: nhập n và in biểu diễn nhị phân."""
     while True:
         n = int(input("Nhập số nguyên dương n (0 <= n < 2^32): "))
         if 0 <= n < 2**32:
@@ -25,4 +36,6 @@ def main():
         print("Vui lòng nhập một số nguyên dương trong khoảng từ 0 đến 2^32 - 1.")
     nhi_phan = chuyenDoiNhiPhan(n)
     print(f"Giá trị nhị phân của {n} là: {nhi_phan}")
+
+
 main()

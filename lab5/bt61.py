@@ -4,6 +4,14 @@
 # Nếu chữ số là chẵn, biến toan_le sẽ được đặt thành False, ngược lại nếu chữ số là lẻ, biến toan_chan sẽ được đặt thành False.
 # Hàm này sẽ trả về hai giá trị: toan_chan và toan_le,
 def kiemTraChuSoChanLe(n):
+    """Kiểm tra các chữ số của n có toàn chẵn hoặc toàn lẻ.
+
+    Args:
+        n (int): Số nguyên dương.
+
+    Returns:
+        tuple[bool, bool]: (toan_chan, toan_le).
+    """
     toan_chan = True
     toan_le = True
     while n > 0:
@@ -16,12 +24,15 @@ def kiemTraChuSoChanLe(n):
     return toan_chan, toan_le
 
 # Đây là hàm chính để chạy chương trình
-# Hàm này sẽ yêu cầu người dùng nhập một số nguyên dương n. 
+# Hàm này sẽ yêu cầu người dùng nhập một số nguyên dương n.
 # Nếu n không hợp lệ (không phải số nguyên dương), nó sẽ yêu cầu nhập lại.
 # Sau khi nhập hợp lệ, nó sẽ gọi hàm kiemTraChuSoChanLe
 # để kiểm tra số lượng chữ số chẵn và lẻ trong n.
-## Cuối cùng, nó sẽ in ra kết quả dựa trên giá trị của toan_chan và toan_le.
+# Cuối cùng, nó sẽ in ra kết quả dựa trên giá trị của toan_chan và toan_le.
+
+
 def main():
+    """Hàm chính: nhập n và in kết luận toàn chẵn/toàn lẻ."""
     while True:
         n = int(input("Nhập số nguyên dương n (n > 0): "))
         if n > 0:
@@ -34,4 +45,6 @@ def main():
         print(f"Tất cả các chữ số của {n} đều là chữ số lẻ.")
     else:
         print(f"Các chữ số của {n} vừa có chữ số chẵn vừa có chữ số lẻ.")
+
+
 main()

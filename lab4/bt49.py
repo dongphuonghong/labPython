@@ -4,25 +4,42 @@
 # Nếu hợp lệ, hàm sẽ tính tiền thuê máy theo quy định và trả về kết quả
 # Quy định: 2500 đồng/giờ/máy trước 17 giờ, 3000 đồng/giờ/máy sau 17 giờ
 def tinh_tien_thue_may(GBD, GKT, SoMay):
+    """Tính tiền thuê máy Internet theo khung giờ.
+
+    Đơn giá: 2500đ/giờ/máy trước 17h, 3000đ/giờ/máy từ 17h trở đi.
+
+    Args:
+        GBD (int): Giờ bắt đầu (6..20).
+        GKT (int): Giờ kết thúc (GBD+1..21).
+        SoMay (int): Số máy thuê.
+
+    Returns:
+        str: Chuỗi kết quả hoặc thông báo lỗi.
+    """
     if not (6 <= GBD < GKT <= 21):
         return "Dữ liệu nhập vào không hợp lệ."
     tien_thue = 0
     for gio in range(GBD, GKT):
         if gio < 17:
-                    tien_thue += 2500 * SoMay
+            tien_thue += 2500 * SoMay
         else:
-                tien_thue += 3000 * SoMay
+            tien_thue += 3000 * SoMay
     return f"Tổng tiền thuê máy: {tien_thue} đồng"
 # Chương trình chính để nhập dữ liệu và gọi hàm tính tiền thuê máy
 # Nó sẽ yêu cầu người dùng nhập giờ bắt đầu, giờ kết thúc và số máy thuê
+
+
 def main():
+    """Hàm chính: nhập dữ liệu và in tiền thuê máy."""
     while True:
         GBD = int(input("Nhập giờ bắt đầu thuê (GBD, từ 6 đến 20): "))
         GKT = int(input("Nhập giờ kết thúc thuê (GKT, từ 7 đến 21): "))
         if 6 <= GBD < GKT <= 21:
             break
-        print("Vui lòng nhập giờ hợp lệ.")  
+        print("Vui lòng nhập giờ hợp lệ.")
     SoMay = int(input("Nhập số máy thuê: "))
     ket_qua = tinh_tien_thue_may(GBD, GKT, SoMay)
     print(ket_qua)
+
+
 main()

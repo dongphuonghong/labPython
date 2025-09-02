@@ -3,6 +3,14 @@
 # Hàm này sẽ lặp qua tất cả các số từ 1 đến n và kiểm tra xem chúng có phải là ước số của n hay không.
 # Nếu là ước số, nó sẽ cộng vào tổng.
 def tongUocSo(n):
+    """Tính tổng các ước số của n.
+
+    Args:
+        n (int): Số nguyên dương.
+
+    Returns:
+        int: Tổng các ước số của n.
+    """
     tong = 0
     for i in range(1, n + 1):
         if n % i == 0:
@@ -13,7 +21,10 @@ def tongUocSo(n):
 # Nếu n không hợp lệ (n <= 0), chương trình sẽ yêu cầu nhập lại.
 # Sau khi nhập hợp lệ, nó sẽ gọi hàm tongUocSo để tính tổng
 # các ước số của n và in ra kết quả.
+
+
 def main():
+    """Hàm chính: nhập n và in tổng các ước số."""
     while True:
         n = int(input("Nhập số nguyên dương n (n > 0): "))
         if n > 0:
@@ -21,4 +32,6 @@ def main():
         print("Vui lòng nhập một số nguyên dương lớn hơn 0.")
     tong_uoc_so = tongUocSo(n)
     print(f"Tổng các ước số của {n} là: {tong_uoc_so}")
+
+
 main()

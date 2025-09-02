@@ -4,19 +4,32 @@
 # Hàm này sẽ lặp qua tất cả các số từ 1 đến n-1 và kiểm tra xem chúng có phải là ước số của n hay không.
 # Nếu là ước số, nó sẽ cộng vào tổng. Cuối cùng, nó sẽ so sánh tổng với n và trả về True nếu chúng bằng nhau, ngược lại trả về False.
 def kiemTraSoHoanThien(n):
+    """Kiểm tra số hoàn thiện.
+
+    Args:
+        n (int): Số nguyên dương.
+
+    Returns:
+        bool: True nếu hoàn thiện, False nếu không.
+    """
     tong = 0
     for i in range(1, n):
         if n % i == 0:
             tong += i
     return tong == n
 # Đây là hàm chính để chạy chương trình
-# Hàm này sẽ in ra các số hoàn thiện nhỏ hơn 5000.  
+# Hàm này sẽ in ra các số hoàn thiện nhỏ hơn 5000.
 # Nó sẽ lặp qua tất cả các số từ 1 đến 4999 và kiểm tra xem số đó có phải là số hoàn thiện hay không.
 # Nếu có, nó sẽ in ra số đó.
+
+
 def main():
+    """Hàm chính: in các số hoàn thiện < 5000."""
     print("Các số hoàn thiện nhỏ hơn 5000 là: ")
     for i in range(1, 5000):
         if kiemTraSoHoanThien(i):
             print(i, end=' ')
     print()
+
+
 main()

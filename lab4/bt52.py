@@ -8,6 +8,21 @@
 #  Hàm này nhận vào các hệ số a, b, c, d, e, f và giải hệ phương trình
 #  bằng cách tính định thức D, Dx và Dy. Nếu D = 0,
 def giai_phuong_trinh(a, b, c, d, e, f):
+    """Giải hệ phương trình tuyến tính hai ẩn.
+
+    Hệ: a*x + b*y = c; d*x + e*y = f.
+
+    Args:
+        a (float): Hệ số a.
+        b (float): Hệ số b.
+        c (float): Hệ số c.
+        d (float): Hệ số d.
+        e (float): Hệ số e.
+        f (float): Hệ số f.
+
+    Returns:
+        None
+    """
     D = a * e - b * d
     Dx = c * e - b * f
     Dy = a * f - c * d
@@ -22,7 +37,10 @@ def giai_phuong_trinh(a, b, c, d, e, f):
         print(f"Phương trình có nghiệm duy nhất: x = {x}, y = {y}")
 # Đây là hàm main để chạy chương trình nhập dữ liệu và hiển thị kết quả
 # Hàm main sẽ gọi hàm giai_phuong_trinh để giải hệ phương trình
+
+
 def main():
+    """Hàm chính: nhập hệ số và giải hệ phương trình."""
     a = float(input("Nhập a: "))
     b = float(input("Nhập b: "))
     c = float(input("Nhập c: "))
@@ -30,4 +48,6 @@ def main():
     e = float(input("Nhập e: "))
     f = float(input("Nhập f: "))
     giai_phuong_trinh(a, b, c, d, e, f)
+
+
 main()

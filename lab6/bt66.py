@@ -5,6 +5,11 @@
 # Trả về: n (int) — số lượng phần tử (>0).
 # Hành vi: Nếu nhập không hợp lệ (<=0), in thông báo và yêu cầu nhập lại cho đến khi hợp lệ.
 def nhap_so_luong_phan_tu():
+    """Nhập số lượng phần tử danh sách (số nguyên dương).
+
+    Returns:
+        int: Số lượng phần tử (>0).
+    """
     while True:
         n = int(input("Nhập số lượng phần tử của mảng: "))
         if n > 0:
@@ -19,6 +24,14 @@ def nhap_so_luong_phan_tu():
 # Trả về: lst (list[int]) — danh sách chứa n phần tử đã nhập.
 # Hành vi: Lặp n lần, mỗi lần yêu cầu nhập một số nguyên và thêm vào danh sách.
 def nhap_danh_sach(n):
+    """Nhập danh sách n số nguyên từ bàn phím.
+
+    Args:
+        n (int): Số lượng phần tử.
+
+    Returns:
+        list[int]: Danh sách các số nguyên đã nhập.
+    """
     lst = []
     for i in range(n):
         x = int(input("Nhập phần tử thứ {}: ".format(i+1)))

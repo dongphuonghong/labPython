@@ -1,23 +1,33 @@
 # 44. Viết chương trình tính diện tích và chu vi hình tròn với bán kính được nhập từ bàn phím.
 import math
-# Đây là hàm tính diện tích hình tròn
-# Công thức tính diện tích hình tròn là S = π * r^2
 
 
 def tinhDienTich(r):
+    """Tính diện tích hình tròn.
+
+    Args:
+        r (float): Bán kính hình tròn.
+
+    Returns:
+        float: Diện tích = π * r^2.
+    """
     return math.pi * r * r
-# Đây là hàm tính chu vi hình tròn
-# Công thức tính chu vi hình tròn là C = 2 * π * r
 
 
 def tinhChuVi(r):
+    """Tính chu vi hình tròn.
+
+    Args:
+        r (float): Bán kính hình tròn.
+
+    Returns:
+        float: Chu vi = 2 * π * r.
+    """
     return 2 * math.pi * r
-# Hàm main để thực hiện chương trình
-# Nó sẽ yêu cầu người dùng nhập bán kính hình tròn và sau đó tính diện tích và chu vi
-# Cuối cùng, nó sẽ in kết quả ra màn hình
 
 
 def main():
+    """Hàm chính: nhập bán kính và in diện tích, chu vi hình tròn."""
     r = float(input("Nhập bán kính hình tròn: "))
     dienTich = tinhDienTich(r)
     chuVi = tinhChuVi(r)
